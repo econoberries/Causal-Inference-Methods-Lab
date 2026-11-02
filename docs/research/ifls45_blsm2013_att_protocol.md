@@ -40,7 +40,7 @@ We must choose what the unit and treatment mean if a 2007 household divides into
 
 ## 4. Candidate identification and estimator
 
-A two-wave **doubly robust panel Difference-in-Differences ATT** is a sensible *candidate*, not an automatic solution.
+A two-wave **doubly robust panel Difference-in-Differences ATT** (Python: current `DoubleMLDID` or `differences`) is a sensible *candidate*, not an automatic solution.
 
 Let \`ΔY=Y_5-Y_4\`. Identification for the eligible treated population requires an **observed-covariate conditional parallel trends assumption**:
 
@@ -86,3 +86,9 @@ RAPSEM estimates **controlled direct and mediator effects of a latent mediator**
 - [RAND IFLS5 User's Guide](https://www.rand.org/well-being/social-and-behavioral-policy/data/FLS/IFLS/ifls5.html)
 - [SMERU, BLSM 2013 implementation](https://www.smeru.or.id/en/publication/use-social-protection-card-kps-and-implementation-2013-unconditional-cash-transfer)
 - [Morelli, Faleh & Brandt, RAPSEM](https://arxiv.org/abs/2509.23935)
+
+## Python-first workflow (added November 2026)
+
+The IFLS project's [Python study audit](https://github.com/econoberries/IFLS-Socio-Economic-Data-Analysis-Project/tree/main/02_scripts/10_blsm_2013/python) now covers original Stata code/label reading, BLSM payment-year checks, roster/tracking inspection, welfare variable inventories, and interview-date metadata. It saves only aggregate tables locally. [Python notebook](https://github.com/econoberries/IFLS-Socio-Economic-Data-Analysis-Project/blob/main/03_notebooks/02_blsm_2013_ifls4_ifls5_audit_py.ipynb).
+
+**Not yet built:** verified welfare aggregate, full household panel with sample rules, DR DiD ATT and subgroup ATT estimation. **RAPSEM** remains implemented in R by its authors; an eventual Python implementation or interface needs validation, especially for observational assignment.
