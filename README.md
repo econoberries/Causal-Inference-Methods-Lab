@@ -89,3 +89,13 @@ See the [roadmap](docs/roadmap.md) for the proposed growth path.
 Do not upload restricted microdata (including IFLS files), individual identifiers, credentials, or licensed paper PDFs. Keep simulations separate from real research data and cite upstream authors when replicating their work.
 
 **Status:** v0.1 starter. Original educational code; upstream software is referenced, not vendored. Python tests run automatically in GitHub Actions.
+
+
+## Active empirical study: IFLS4–IFLS5 BLSM 2013
+
+We are auditing the **ATT of BLSM 2013 cash-transfer receipt on household economic welfare** using IFLS4 as baseline and IFLS5 as follow-up; subgroup ATT will use baseline-defined characteristics. The outcome candidate is harmonized real monthly household consumption per capita. **No causal estimate is available yet**.
+
+- [Study 01 research protocol](docs/research/ifls45_blsm2013_att_protocol.md)
+- [Study 01 audit and decisions (Issue #4)](https://github.com/econoberries/Causal-Inference-Methods-Lab/issues/4)
+
+The R audit scripts and non-shared IFLS data live in the existing separate IFLS RStudio project. First verify BLSM 2013 receipt/timing, IFLS4–5 panel linkage, and consumption measurements. Follow with a defensible observational ATT design; RAPSEM is a separate mediation feasibility question.
