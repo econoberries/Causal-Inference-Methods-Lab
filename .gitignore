@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+build/
+dist/
+.ipynb_checkpoints/
+
+# R / RStudio
+.Rhistory
+.RData
+.Rproj.user/
+.Renviron
+
+# Data and generated outputs
+data/raw/
+data/processed/
+outputs/
+results/
+*.log
+.DS_Store
+
+# Secrets
+.env
+*.key
+*.pem
